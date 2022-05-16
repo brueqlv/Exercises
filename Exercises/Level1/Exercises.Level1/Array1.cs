@@ -109,7 +109,7 @@ public class Array1
     /// </summary>
     public int Sum3(int[] nums)
     {
-        int sum =0;
+        int sum = 0;
 
         foreach (var num in nums)
         {
@@ -172,17 +172,17 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-       
+
         int max;
 
         if (nums[0] > nums[1] && nums[0] > nums[2])
 
             max = nums[0];
 
-       
+
         else
-        max = nums[2];
-      
+            max = nums[2];
+
 
         int[] newNums = new int[nums.Length];
         newNums[0] = max;
@@ -202,17 +202,17 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        
+
         if (nums.Length == 1)
-            
+
             return nums[0];
-        
+
         else if (nums.Length == 0)
-            
+
             return 0;
-        
-         else
-            
+
+        else
+
             return nums[0] + nums[1];
 
     }
@@ -227,7 +227,7 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-       
+
         return new int[] { a[1], b[1] };
     }
 
@@ -246,7 +246,7 @@ public class Array1
 
         return new int[] { first, last };
 
-        
+
     }
 
     /// <summary>
@@ -258,11 +258,11 @@ public class Array1
     /// </summary>
     public bool Has23(int[] nums)
     {
-        foreach (var item in nums)
+        foreach (var num in nums)
         {
-            if(item ==2 || item == 3)
+            if (num == 2 || num == 3)
             {
-               return true;
+                return true;
             }
         }
         return false;
@@ -279,11 +279,11 @@ public class Array1
     {
         foreach (var item in nums)
         {
-            if ( item ==2 || item == 3)
+            if (item == 2 || item == 3)
             {
                 return false;
             }
-            
+
         }
         return true;
     }
@@ -299,16 +299,16 @@ public class Array1
     /// </summary>
     public int[] MakeLast(int[] nums)
     {
-        
-      
+
+
 
         int[] newNums = new int[nums.Length * 2];
-        newNums[nums.Length * 2 -1] = nums[nums.Length - 1];
-        return newNums; 
+        newNums[nums.Length * 2 - 1] = nums[nums.Length - 1];
+        return newNums;
 
-       
-        
-        
+
+
+
 
     }
 
@@ -322,16 +322,16 @@ public class Array1
     /// </summary>
     public bool Double23(int[] nums)
     {
-        
-      if(nums.Length == 2)
+
+        if (nums.Length == 2)
         {
             if ((nums[0] == 2 && nums[1] == 2) || (nums[0] == 3 && nums[1] == 3))
             {
                 return true;
             }
-            
+
         }
-       
+
         return false;
     }
 
@@ -353,7 +353,7 @@ public class Array1
         {
             nums[2] = 0;
         }
-        return new int[] {nums[0], nums[1], nums[2]};
+        return new int[] { nums[0], nums[1], nums[2] };
     }
 
     /// <summary>
@@ -367,15 +367,15 @@ public class Array1
     public int Start1(int[] a, int[] b)
     {
         int first1 = 0;
-        if(a.Length !=0)
+        if (a.Length != 0)
         {
             if (a[0] == 1)
-                {
+            {
 
                 first1++;
             }
         }
-        if(b.Length !=0)
+        if (b.Length != 0)
         {
             if (b[0] == 1)
             {
@@ -397,7 +397,7 @@ public class Array1
     {
         int sum1 = a[0] + a[1];
         int sum2 = b[0] + b[1];
-        if (sum1>=sum2)
+        if (sum1 >= sum2)
         {
             return a;
         }
@@ -414,9 +414,9 @@ public class Array1
     /// </summary>
     public int[] MakeMiddle(int[] nums)
     {
-        
 
-        return new int[] { nums[nums.Length / 2 - 1], nums[nums.Length / 2] }; ;    
+
+        return new int[] { nums[nums.Length / 2 - 1], nums[nums.Length / 2] }; ;
 
     }
 
@@ -444,7 +444,7 @@ public class Array1
     public int[] SwapEnds(int[] nums)
     {
         int lastIndex = nums.Length - 1;
-        
+
         int temp = nums[0];
 
         nums[0] = nums[lastIndex];
@@ -462,7 +462,7 @@ public class Array1
     /// </summary>
     public int[] MidThree(int[] nums)
     {
-        return new int[] { nums[nums.Length / 2 - 1], nums[nums.Length / 2], nums[nums.Length / 2 +1]  }; ;
+        return new int[] { nums[nums.Length / 2 - 1], nums[nums.Length / 2], nums[nums.Length / 2 + 1] }; ;
     }
 
     /// <summary>
@@ -476,7 +476,7 @@ public class Array1
     public int MaxTriple(int[] nums)
     {
         int first = nums[0];
-        int last = nums[nums.Length - 1]; 
+        int last = nums[nums.Length - 1];
         int middle = nums[nums.Length / 2];
 
         return (Math.Max(Math.Max(first, last), middle));
@@ -510,21 +510,21 @@ public class Array1
     /// </summary>
     public bool Unlucky1(int[] nums)
     {
-        if(nums.Length < 2)
+        if (nums.Length < 2)
         {
             return false;
         }
-        
-  
-         else if ((nums.Length > 2 && nums[1] == 1 && nums[2] == 3)||(nums[0] == 1 && nums[1] == 3) || (nums[nums.Length - 2] == 1 && nums[nums.Length - 1] == 3))
+
+
+        else if ((nums.Length > 2 && nums[1] == 1 && nums[2] == 3) || (nums[0] == 1 && nums[1] == 3) || (nums[nums.Length - 2] == 1 && nums[nums.Length - 1] == 3))
         {
-            
-          return true;
-            
+
+            return true;
+
         }
-        else 
-            
-      return false;
+        else
+
+            return false;
 
     }
 
@@ -575,9 +575,9 @@ public class Array1
         {
             return new int[] { a[0], b[0] };
         }
-        else if (a.Length == 0 && b.Length ==0)
+        else if (a.Length == 0 && b.Length == 0)
         {
-            return new int[] {};
+            return new int[] { };
 
         }
         else if (b.Length == 0)
@@ -585,6 +585,6 @@ public class Array1
             return new int[] { a[0] };
         }
         else
-            return new int[] {b[0]};
+            return new int[] { b[0] };
     }
 }
